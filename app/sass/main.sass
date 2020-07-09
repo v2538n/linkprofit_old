@@ -1,0 +1,331 @@
+@import reset
+
+$fz: 16
+
+body
+	font: normal 1rem Arial, sans-serif
+	line-height: 1.5
+
+%section
+	min-width: 300px
+	display: flex
+	justify-content: center
+
+%section-inner
+	width: 990px
+	padding: 25px
+	box-sizing: border-box
+
+.section
+	@extend %section
+	
+	&-inner
+		display: flex
+		flex-wrap: wrap
+		@extend %section-inner
+
+.header
+	padding-top: 5px
+	@extend %section
+	
+	&-inner
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
+		@extend %section-inner
+
+	&-heading
+		margin-bottom: 6px
+		font-size: (50 / $fz) + rem
+		font-weight: bold
+		color: #004b8d
+		text-align: center
+
+		span
+			font-size: (45 / $fz) + rem
+			font-weight: normal
+			color: #505a61
+	
+	&-text
+		width: 70%
+		margin-bottom: 40px
+		text-align: center
+		font-size: 1rem
+		color: #505a61
+
+	&-navigation
+		display: flex
+		justify-content: center
+
+		&__item
+			display: inline-block
+			margin-right: 40px
+			font-size: (18 / $fz) + rem
+			text-transform: uppercase
+			text-decoration: none
+			color: #004b8d
+			border-bottom: 1px solid transparent
+			transition: .2s
+
+			&:hover
+				border-bottom: 1px solid #004b8d
+
+.section-1
+	min-height: 586px
+	background-image: url('../img/bg_1.png')
+	background-position: center
+	background-color: #4d5e75
+
+	.section-inner
+		margin-bottom: 15px
+		justify-content: space-between
+
+	.block-left 
+		width: 356px
+		padding: 54px 0 40px
+		box-sizing: border-box
+		border: 2px solid #004b8d
+		background: #fff
+		text-decoration: none
+
+		&__image
+			width: 230px
+			height: 56px
+			display: block
+			margin: 0 auto 32px
+
+		&__limit
+			margin-bottom: 2px
+			display: flex
+			justify-content: center
+			font-size: (18 / $fz) + rem
+			line-height: 1
+			text-transform: uppercase
+			color: #04415b
+
+			&-inner
+				display: inline-block
+				border-bottom: 2px solid #04415b
+
+			&-bold
+				display: inline-block
+				font-size: (30 / $fz) + rem
+				font-weight: bold
+
+		&__rate
+			margin-bottom: 40px
+			font-size: (18 / $fz) + rem
+			color: #505a61
+			text-align: center
+
+		&__criteria
+			margin-bottom: 28px
+
+			&-item
+				display: flex
+				justify-content: flex-start
+				align-items: baseline
+				padding: 0 60px 0 44px
+				margin-bottom: 12px
+				font-size: (18 / $fz) + rem
+				color: #505a61
+
+				span
+					display: inline-block
+
+			&-item:before
+				flex-shrink: 0
+				display: inline-block
+				content: ''
+				width: 12px
+				height: 12px
+				margin-right: 22px
+				border-radius: 100%
+				background: #04415b
+
+		&__get-money
+			height: 68px
+			display: flex
+			justify-content: center
+			align-items: center
+			border-top: 1px solid #083760
+			border-bottom: 1px solid #083760
+			background: #085e96
+			box-shadow: 0 0 30px 2px inset #005082
+			color: #fff
+			font-size: (30 / $fz) + rem
+			cursor: pointer
+
+
+	.block-right
+		width: 580px
+		padding: 44px 90px 40px 60px
+		box-sizing: border-box
+		border: 2px solid #004b8d
+		background: #fff
+
+		&__heading
+			margin-top: 4px
+			margin-bottom: 50px
+			font-size: (30 / $fz) + rem
+			font-weight: bold
+			color: #004b8d
+			text-align: center
+
+		&__info
+			margin-bottom: 45px
+
+			&-line
+				display: flex
+				justify-content: flex-start
+				align-items: baseline
+				margin-bottom: 5px
+				color: #505a61
+
+			&-title
+				font-size: (18 / $fz) + rem
+				font-weight: bold
+
+			&-delimiter
+				flex-grow: 1
+				flex-shrink: 1
+				margin: 0 6px
+				border-bottom: 1px dashed
+
+			&-value
+				font-size: 1rem
+
+.section-2
+	height: 190px
+	padding: 20px 0
+	box-sizing: border-box
+
+	.section-inner
+		justify-content: center
+		align-items: center
+
+.section-3
+	height: 100px
+	background-image: url('../img/bg_2.png')
+	background-position: center
+	background-color: #354762
+
+	.section-inner
+		justify-content: center
+		align-items: center
+	
+	.section-3__text
+		font-size: (24 / $fz) + rem
+		font-weight: bold
+		color: #fff
+		text-transform: uppercase
+
+.section-4
+	padding: 20px 0 0 0
+
+	.section-inner
+
+		justify-content: space-between
+		flex-flow: wrap
+		align-content: flex-start
+
+		@media screen and (max-width: 1024px)
+			justify-content: center
+
+	.block-element
+		flex-basis: 224px
+		flex-shrink: 0
+		width: 224px
+		height: 326px
+		padding-top: 34px
+		box-sizing: border-box
+		margin-bottom: 25px
+		border: 2px solid #004b8d
+		text-decoration: none
+
+		@media screen and (max-width: 1024px)
+			margin-right: 20px
+
+		&__image
+			display: flex
+			justify-content: center
+			margin-bottom: 30px
+
+		&__limit
+			display: flex
+			justify-content: center
+			align-items: baseline
+			color: #04415b
+			font-size: (12 / $fz) + rem
+			text-transform: uppercase
+
+			span
+				display: inline-block
+				padding: 0 4px
+				font-size: 1rem
+				font-weight: bold
+
+		&__rate
+			display: flex
+			justify-content: center
+			margin-bottom: 20px
+			font-size: (14 / $fz) + rem
+			color: #505a61
+
+		&__criteria
+			margin-bottom: 22px
+
+			&-item
+				display: flex
+				justify-content: flex-start
+				align-items: center
+				padding: 0 12px
+				margin-bottom: 5px
+				font-size: (14 / $fz) + rem
+				color: #505a61
+
+				span
+					display: inline-block
+
+			&-item:before
+				flex-shrink: 0
+				display: inline-block
+				content: ''
+				width: 7px
+				height: 7px
+				margin-right: 12px
+				border-radius: 100%
+				background: #04415b
+
+		&__get-money
+			height: 46px
+			display: flex
+			justify-content: center
+			align-items: center
+			border-top: 1px solid #083760
+			border-bottom: 1px solid #083760
+			background: #085e96
+			box-shadow: 0 0 30px 2px inset #005082
+			color: #fff
+			font-size: (20 / $fz) + rem
+
+.footer
+	height: 292px
+	margin-bottom: 64px
+	background-image: url('../img/bg_footer.png')
+	background-position: center
+	background-color: #354762
+	@extend %section
+
+	&-inner
+		width: 720px
+		padding: 30px 20px
+		box-sizing: border-box
+
+	&__text
+		font-size: (24 / $fz) + rem
+		color: #fff
+		text-align: center
+		letter-spacing: 1.8px
+
+@import media

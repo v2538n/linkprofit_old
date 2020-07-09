@@ -1,0 +1,206 @@
+$media_font-size: (1024px: 15, 768px: 14, 500px: 13, 320px: 12)
+
+@each $media, $size in $media_font-size
+	@media screen and(max-width: $media)
+	 	html
+	 		font-size: ($size / $fz) + rem 
+
+
+
+@media screen and(max-width: 1024px)
+
+	.section-inner
+		width: 100%
+
+	.header-inner, .section-inner
+		padding: (25 * 0.9) + px
+
+	.section-1
+		.block-left, .block-right
+			width: 100%
+
+		.block-left
+			margin-bottom: 20px
+
+	.footer
+		height: auto
+		margin-bottom: 30px
+
+
+
+@media screen and(max-width: 850px)
+	.header
+		&-text
+			width: 75%
+
+@media screen and(max-width: 768px)
+
+	.header-inner, .section-inner
+		justify-content: flex-start
+		padding: (25 * 0.8) + px
+
+	.header-text
+		width: 80%
+		margin-bottom: (40 * 0.6) + px
+		text-align: left
+
+	.header-navigation
+		&__item
+			font-size: 1rem
+
+	.section-1
+		.block-right
+			padding: 40px 30px
+
+	.section-2
+		height: auto
+		padding: 10px 0 0 0
+
+		&__link
+			text-align: center
+
+		&__image
+			width: 100%
+
+	.section-3
+		.section-3__text
+			font-size: ((24 / $fz) * 0.9) + rem
+
+	.footer__text
+		font-size: ((24 / $fz) * 0.8) + rem
+		text-align: left
+
+		
+@media screen and(max-width: 700px)
+
+	.header-inner, .section-inner
+		padding: (25 * 0.6) + px
+
+	.header-heading
+		font-size: ((50 * 0.85) / $fz) + rem
+		span
+			font-size: ((45 * 0.85) / $fz) + rem
+
+	.header-text
+		font-size: (($fz * 0.85) / $fz) + rem
+
+
+@media screen and(max-width:600px)
+	.section-4 
+		.section-inner
+			justify-content: space-around
+
+		.block-element
+			&:nth-child(1n+1)
+				margin-right: 0	
+
+
+@media screen and(max-width: 580px)
+	
+	.header-inner, .section-inner
+		padding: (25 * 0.5) + px
+
+	.header-heading
+		font-size: ((50 * 0.75) / $fz) + rem
+		span
+			font-size: ((45 * 0.75) / $fz) + rem
+
+	.header-text
+		font-size: (($fz * 0.8) / $fz) + rem
+		margin-bottom: 1rem
+
+	.section-3
+		height: auto
+		padding: 15px 0
+
+	.footer__text
+		font-size: ((24 / $fz) * 0.8) + rem
+		text-align: left
+
+
+@media screen and(max-width: 500px)
+
+	.header-inner, .section-inner
+		padding: (25 * 0.4) + px
+		justify-content: flex-start
+
+	.header-heading
+		font-size: ((50 * 0.6) / $fz) + rem
+		span
+			font-size: ((45 * 0.55) / $fz) + rem
+
+	.header-text
+		width: 90%
+		text-align: left
+
+	.header-navigation
+		margin-bottom: 5px
+		
+		&__item
+			font-size: 0.9rem
+
+	.section-3
+		.section-3__text
+			font-size: ((24 / $fz) * 0.8) + rem
+
+
+@media screen and(max-width: 450px)
+	.header-inner, .section-inner
+		padding: (25 * 0.3) + px
+
+	.header-heading
+		font-size: ((50 * 0.55) / $fz) + rem
+		span
+			font-size: ((45 * 0.55) / $fz) + rem
+
+	.section-1 
+		.block-left__criteria-item
+			padding: 0 24px
+
+	.section-1
+		.block-right
+			padding: 20px 15px
+
+	.section-1 
+		.block-right__heading
+			font-size: (30 / $fz * 0.8) + rem
+
+	.section-1 
+		.block-right__info-title
+			font-size: 1rem
+
+		.block-right__info-value
+			font-size: 0.9rem
+
+	.footer__text
+		font-size: ((24 / $fz) * 0.7) + rem
+	
+
+@media screen and(max-width: 350px)
+	.header-inner, .section-inner
+		padding: (25 * 0.25) + px
+
+	.header-heading
+		font-size: ((50 * 0.5) / $fz) + rem
+		span
+			font-size: ((45 * 0.45) / $fz) + rem
+
+	.section-1 
+		.block-right__info-title
+			font-size: 0.9rem
+
+		.block-right__info-value
+			font-size: 0.8rem
+
+	.section-3
+		.section-3__text
+			font-size: ((24 / $fz) * 0.7) + rem
+
+	.footer__text
+		font-size: ((24 / $fz) * 0.6) + rem
+
+
+@media screen and(max-width: 320px)
+
+	.header-inner, .section-inner
+		padding: (25 * 0.2) + px
